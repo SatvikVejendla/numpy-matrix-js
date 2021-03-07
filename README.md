@@ -48,4 +48,28 @@ rows         |  number of rows in your array | yes
 cols         |  number of columns in your array | yes
 
 
-### Functions
+### Built-in Math Functions
+
+#### Sigmoid
+
+```np.sigmoid(x)```
+
+Returns the sigmoid value of whatever "x" value you input
+
+#### Dsigmoid (Derivative of sigmoid)
+
+```np.dsigmoid(x)```
+
+Returns the dsigmoid value of whatever "x" value you input
+
+### Tanh (Hyperbolic Tangent)
+
+```np.tanh(x)```
+
+Returns the hyperbolic tangent value of whatever "x" value you input
+
+### Softmax
+
+```np.softmax(inputs)```
+
+Applies the softmax function to the inputs array and returns the new result as an array.
