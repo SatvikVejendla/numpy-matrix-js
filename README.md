@@ -62,13 +62,13 @@ Returns the sigmoid value of whatever "x" value you input
 
 Returns the dsigmoid value of whatever "x" value you input
 
-### Tanh (Hyperbolic Tangent)
+#### Tanh (Hyperbolic Tangent)
 
 ```np.tanh(x)```
 
 Returns the hyperbolic tangent value of whatever "x" value you input
 
-### Softmax
+#### Softmax
 
 ```np.softmax(inputs)```
 
