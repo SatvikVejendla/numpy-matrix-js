@@ -24,6 +24,8 @@ After this, you can now use the functions available in the module.
 
 # Documentation
 
+
+
 ### Initializing
 
 
@@ -46,6 +48,55 @@ Parameters   |   What it is   | Required
 -------------|----------------|----------
 rows         |  number of rows in your array | yes
 cols         |  number of columns in your array | yes
+
+### Math
+
+```np.matmul(a, b)```
+
+Multiplies 2 matrices together and returns the result.
+
+Note: Like linear algebra, the columns of the first matrix must match the rows of the second matrix.
+
+Parameters    | What it is    | Required
+--------------|---------------|----------
+a             | First matrix  | Yes
+b             | Second matrix | Yes
+
+
+```np.add(a,b)```
+
+Adds 2 matrices together and returns the result.
+
+Note: Like linear algebra, the dimensions of both matrices needs to match.
+
+Parameters   | What it is    | Required
+-------------|---------------|---------
+a            | First matrix  | Yes
+b            | Second matrix | Yes
+
+
+```np.subtract(a,b)```
+
+Subtracts 2 matrices and returns the result.
+
+Note: Like linear algebra, the dimensions of both matrices needs to match.
+
+Parameters   | What it is    | Required
+-------------|---------------|---------
+a            | First matrix  | Yes
+b            | Second matrix | Yes
+
+```np.transpose(a)```
+
+Returns the transposed version of the matrix "a".
+
+
+Parameters   | What it is    | Required
+-------------|---------------|---------
+a            | Input matrix which needs to be transposed  | Yes
+
+
+
 
 
 ### Built-in Math Functions
