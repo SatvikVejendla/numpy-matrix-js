@@ -148,5 +148,4 @@ module.exports = {
   tanh: functions.tanh,
   subtract: m_math.subtract,
   add: m_math.add,
-  reshape: map.reshape,
 };

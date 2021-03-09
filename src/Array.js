@@ -12,3 +12,29 @@ Object.defineProperty(Array.prototype, "randomize", {
   value: this,
 });
 */
+const empty = require("../lib/init/empty");
+
+Object.defineProperty(Array.prototype, "reshape", {
+  value: function reshape(rows, cols) {
+    let size = this.length * this[0].length;
+    if (size % rows == 0 && size % cols == 0 && size / rows == cols) {
+      let oned = empty(size, 1);
+      let counter = 0;
+      for (let i = 0; i < this.length; i++) {
+        for (let j = 0; j < this[0].length; j++) {
+          oned[counter] = this[i][j];
+          counter++;
+        }
+      }
+      let result = empty(rows, cols);
+      counter = 0;
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          result[i][j] = oned[counter];
+          counter++;
+        }
+      }
+      return result;
+    }
+  },
+});
