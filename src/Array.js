@@ -38,3 +38,14 @@ Object.defineProperty(Array.prototype, "reshape", {
     }
   },
 });
+
+Object.defineProperty(Array.prototype, "map", {
+  value: function (func) {
+    for (var i = 0; i < this.length; i++) {
+      for (var j = 0; j < this[i].length; j++) {
+        let val = this[i][j];
+        this[i][j] = func(val);
+      }
+    }
+  },
+});
