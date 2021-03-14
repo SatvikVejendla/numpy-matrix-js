@@ -6,6 +6,8 @@ A numpy-like Matrix/Array module for Node JS. Browser support coming soon.
 
 # Installation & Set Up
 
+
+## NPM
 In your terminal, type this command to install the module.
 
 ```
@@ -20,6 +22,16 @@ const np = require('numpy-matrix-js')
 
 After this, you can now use the functions available in the module.
 
+
+## Browser
+
+Add this following script tag to your html file.
+
+```
+<script type="module">
+     import np from "https://unpkg.com/numpy-matrix-js@1.0.8/src/html/index.js"
+</script>
+```
 
 
 # Documentation
