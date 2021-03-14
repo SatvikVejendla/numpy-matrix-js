@@ -49,3 +49,21 @@ Object.defineProperty(Array.prototype, "map", {
     }
   },
 });
+
+Object.defineProperty(Array.prototype, "multiply", {
+  value: function (m2) {
+    if (m2.constructor == Number) {
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < this[i].length; j++) {
+          this[i][j] *= m2;
+        }
+      }
+    } else {
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < this[i].length; j++) {
+          this[i][j] *= m2[i][j];
+        }
+      }
+    }
+  },
+});
