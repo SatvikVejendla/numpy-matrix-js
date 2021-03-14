@@ -1,3 +1,5 @@
+import empty from "../../lib/main/init/html/empty.js";
+
 Object.defineProperty(Array.prototype, "randomize", {
   value: function (range1 = 0, range2 = 1) {
     for (var i = 0; i < this.length; i++) {
@@ -7,12 +9,6 @@ Object.defineProperty(Array.prototype, "randomize", {
     }
   },
 });
-
-/*Object.defineProperty(Array.prototype, "T", {
-  value: this,
-});
-*/
-const empty = require("../lib/init/empty");
 
 Object.defineProperty(Array.prototype, "reshape", {
   value: function reshape(rows, cols) {
