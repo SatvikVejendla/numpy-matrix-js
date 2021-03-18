@@ -1,6 +1,6 @@
 # numpy-matrix-js
 
-A numpy-like Matrix/Array module for Node JS. Browser support coming soon.
+A numpy-like Matrix/Array module for Node JS and Browser JS
 
 
 
