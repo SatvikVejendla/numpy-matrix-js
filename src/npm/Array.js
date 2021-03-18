@@ -1,4 +1,4 @@
-const empty = require("../../lib/main/init/npm/empty");
+const empty = require("../../lib/main/init/empty");
 
 Object.defineProperty(Array.prototype, "randomize", {
   value: function (range1 = 0, range2 = 1) {
@@ -37,11 +37,21 @@ Object.defineProperty(Array.prototype, "reshape", {
 
 Object.defineProperty(Array.prototype, "map", {
   value: function (func) {
-    for (var i = 0; i < this.length; i++) {
-      for (var j = 0; j < this[i].length; j++) {
-        let val = this[i][j];
-        this[i][j] = func(val);
+    if (this[0].constructor == Array) {
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < this[i].length; j++) {
+          let val = this[i][j];
+          this[i][j] = func(val);
+        }
       }
+    } else if (this.constructor == Array && this[0].constructor == Number) {
+      for (let i = 0; i < this.length; i++) {
+        5;
+        let val = this[i];
+        this[i] = func(val);
+      }
+    } else {
+      console.log("\x1b[31m%s\x1b[0m", "ERROR: Did not receive 1D or 2D array");
     }
   },
 });
@@ -61,5 +71,26 @@ Object.defineProperty(Array.prototype, "multiply", {
         }
       }
     }
+  },
+});
+
+const transpose = require("../../lib/main/s_matrix_math/transpose");
+
+Object.defineProperty(Array.prototype, "T", {
+  get() {
+    return transpose(this);
+  },
+});
+const debug = require("../../lib/main/debug/export.js");
+
+Object.defineProperty(Array.prototype, "info", {
+  value: function () {
+    debug.info(this);
+  },
+});
+
+Object.defineProperty(Array.prototype, "table", {
+  value: function () {
+    debug.table(this);
   },
 });

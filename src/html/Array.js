@@ -1,4 +1,4 @@
-import empty from "../../lib/main/init/html/empty.js";
+let empty = window.empty;
 
 Object.defineProperty(Array.prototype, "randomize", {
   value: function (range1 = 0, range2 = 1) {
@@ -12,36 +12,49 @@ Object.defineProperty(Array.prototype, "randomize", {
 
 Object.defineProperty(Array.prototype, "reshape", {
   value: function reshape(rows, cols) {
-    let size = this.length * this[0].length;
-    if (size % rows == 0 && size % cols == 0 && size / rows == cols) {
-      let oned = empty(size, 1);
-      let counter = 0;
-      for (let i = 0; i < this.length; i++) {
-        for (let j = 0; j < this[0].length; j++) {
-          oned[counter] = this[i][j];
-          counter++;
+    if (this[0].constructor == Array) {
+      let size = this.length * this[0].length;
+      if (size % rows == 0 && size % cols == 0 && size / rows == cols) {
+        let oned = empty(size, 1);
+        let counter = 0;
+        for (let i = 0; i < this.length; i++) {
+          for (let j = 0; j < this[0].length; j++) {
+            oned[counter] = this[i][j];
+            counter++;
+          }
         }
-      }
-      let result = empty(rows, cols);
-      counter = 0;
-      for (let i = 0; i < rows; i++) {
-        for (let j = 0; j < cols; j++) {
-          result[i][j] = oned[counter];
-          counter++;
+        let result = empty(rows, cols);
+        counter = 0;
+        for (let i = 0; i < rows; i++) {
+          for (let j = 0; j < cols; j++) {
+            result[i][j] = oned[counter];
+            counter++;
+          }
         }
+        return result;
       }
-      return result;
+    } else {
+      console.log("\x1b[31m%s\x1b[0m", "ERROR: Cannot reshape 1D array");
     }
   },
 });
 
 Object.defineProperty(Array.prototype, "map", {
   value: function (func) {
-    for (var i = 0; i < this.length; i++) {
-      for (var j = 0; j < this[i].length; j++) {
-        let val = this[i][j];
-        this[i][j] = func(val);
+    if (this[0].constructor == Array) {
+      for (var i = 0; i < this.length; i++) {
+        for (var j = 0; j < this[i].length; j++) {
+          let val = this[i][j];
+          this[i][j] = func(val);
+        }
       }
+    } else if (this.constructor == Array && this[0].constructor == Number) {
+      for (let i = 0; i < this.length; i++) {
+        let val = this[i];
+        this[i] = func(val);
+      }
+    } else {
+      console.log("\x1b[31m%s\x1b[0m", "ERROR: Did not receive 1D or 2D array");
     }
   },
 });
@@ -61,5 +74,20 @@ Object.defineProperty(Array.prototype, "multiply", {
         }
       }
     }
+  },
+});
+
+import info from "../../lib/main/debug/info.js";
+import table from "../../lib/main/debug/table.js";
+
+Object.defineProperty(Array.prototype, "info", {
+  value: function () {
+    info(this);
+  },
+});
+
+Object.defineProperty(Array.prototype, "table", {
+  value: function () {
+    table(this);
   },
 });

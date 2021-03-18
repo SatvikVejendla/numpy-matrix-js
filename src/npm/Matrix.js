@@ -5,7 +5,7 @@ const {
   m_math,
   s_math,
   functions,
-} = require("../../lib/exports/npm/export");
+} = require("../../lib/exports/export");
 
 module.exports = {
   zeros: init.zeros,

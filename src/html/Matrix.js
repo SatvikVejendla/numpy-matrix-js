@@ -1,14 +1,11 @@
-import np from "../../lib/exports/html/export.js";
-
-export default {
-  zeros: np.init.zeros,
-  random: np.random,
-  matmul: np.m_math.multiply,
-  transpose: np.s_math.transpose,
-  sigmoid: np.functions.sigmoid,
-  dsigmoid: np.functions.dsigmoid,
-  softmax: np.functions.softmax,
-  tanh: np.functions.tanh,
-  subtract: np.m_math.subtract,
-  add: np.m_math.add,
-};
+import "../../lib/main/functions/sigmoid.js";
+import "../../lib/main/functions/dsigmoid.js";
+import "../../lib/main/functions/tanh.js";
+import "../../lib/main/functions/softmax.js";
+import "../../lib/main/init/empty.js";
+import "../../lib/main/init/zeros.js";
+import "../../lib/main/m_matrix_math/add.js";
+import "../../lib/main/m_matrix_math/multiply.js";
+import "../../lib/main/m_matrix_math/subtract.js";
+import "../../lib/main/random/rand.js";
+import "../../lib/main/s_matrix_math/transpose.js";
