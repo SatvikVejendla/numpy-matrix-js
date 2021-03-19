@@ -190,5 +190,4 @@ Latest Versions: 1.1.3
 Stable Versions:
 
 - 1.1.3: Fixed debug glitches. Added relu functions
-- 
 - 1.1.1: Working browser support via static import
