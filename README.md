@@ -137,10 +137,20 @@ Returns the hyperbolic tangent value of whatever "x" value you input
 
 Applies the softmax function to the inputs array and returns the new result as an array.
 
+### Relu
+
+```np.relu(x)```
+
+Applies the relu function to the value "x" and returns result.
+
+### Leaky Relu
+
+```np.leakyrelu(x)```
+
+Applies the leaky relu function to the value "x" and returns the result.
 
 
 ## Debug
-
 
 ### Info
 
@@ -161,14 +171,24 @@ arr.table()
 
 Automatically prints the array to the console in a neat format
 
+### HasNaN
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.hasNaN()
+```
+
+Checks if any of the values of the array are "NaN". If there are values with "NaN", it prints "true" to the console.
 
 
 
 
 # Versions
 
-Latest Versions: 1.1.1
+Latest Versions: 1.1.3
 
 Stable Versions:
 
+- 1.1.3: Fixed debug glitches. Added relu functions
+- 
 - 1.1.1: Working browser support via static import
