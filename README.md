@@ -29,7 +29,7 @@ Add this following script tag to your html file.
 
 ```
 <script type="module">
-     import np from "https://unpkg.com/numpy-matrix-js@1.0.8/src/html/index.js"
+            import np from "https://unpkg.com/numpy-matrix-js@1.1.1/src/html/index.js"
 </script>
 ```
 
@@ -136,3 +136,39 @@ Returns the hyperbolic tangent value of whatever "x" value you input
 ```np.softmax(inputs)```
 
 Applies the softmax function to the inputs array and returns the new result as an array.
+
+
+
+## Debug
+
+
+### Info
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.info()
+```
+
+Automatically logs the dimensions of the array that you invoke the function on.
+
+
+### Table
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.table()
+```
+
+Automatically prints the array to the console in a neat format
+
+
+
+
+
+# Versions
+
+Latest Versions: 1.1.1
+
+Stable Versions:
+
+- 1.1.1: Working browser support via static import
