@@ -1,4 +1,7 @@
-let empty = window.empty;
+let empty = window.tempnpempty;
+let info = window.tempnpinfo;
+let table = window.tempnptable;
+let hasNaN = window.tempnphasnan;
 
 Object.defineProperty(Array.prototype, "randomize", {
   value: function (range1 = 0, range2 = 1) {
@@ -77,9 +80,6 @@ Object.defineProperty(Array.prototype, "multiply", {
   },
 });
 
-import info from "../../lib/main/debug/info.js";
-import table from "../../lib/main/debug/table.js";
-
 Object.defineProperty(Array.prototype, "info", {
   value: function () {
     info(this);
@@ -89,5 +89,11 @@ Object.defineProperty(Array.prototype, "info", {
 Object.defineProperty(Array.prototype, "table", {
   value: function () {
     table(this);
+  },
+});
+
+Object.defineProperty(Array.prototype, "hasNaN", {
+  value: function () {
+    hasNaN(this);
   },
 });

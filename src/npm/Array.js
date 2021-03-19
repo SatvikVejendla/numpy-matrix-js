@@ -94,3 +94,8 @@ Object.defineProperty(Array.prototype, "table", {
     debug.table(this);
   },
 });
+Object.defineProperty(Array.prototype, "hasNaN", {
+  value: function () {
+    debug.hasNaN(this);
+  },
+});

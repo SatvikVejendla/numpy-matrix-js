@@ -9,3 +9,7 @@ import "../../lib/main/m_matrix_math/multiply.js";
 import "../../lib/main/m_matrix_math/subtract.js";
 import "../../lib/main/random/rand.js";
 import "../../lib/main/s_matrix_math/transpose.js";
+import "../../lib/main/functions/dtanh.js";
+import "../../lib/main/debug/hasNaN.js";
+import "../../lib/main/debug/info.js";
+import "../../lib/main/debug/table.js";

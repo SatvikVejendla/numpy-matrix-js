@@ -16,6 +16,9 @@ module.exports = {
   dsigmoid: functions.dsigmoid,
   softmax: functions.softmax,
   tanh: functions.tanh,
+  dtanh: functions.dtanh,
+  relu: functions.relu,
+  leakyrelu: functions.leakyrelu,
   subtract: m_math.subtract,
   add: m_math.add,
 };
