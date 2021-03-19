@@ -1,6 +1,6 @@
 # numpy-matrix-js
 
-A numpy-like Matrix/Array module for Node JS. Browser support coming soon.
+A numpy-like Matrix/Array module for Node JS and Browser JS
 
 
 
@@ -29,7 +29,7 @@ Add this following script tag to your html file.
 
 ```
 <script type="module">
-     import np from "https://unpkg.com/numpy-matrix-js@1.0.8/src/html/index.js"
+            import np from "https://unpkg.com/numpy-matrix-js@1.1.1/src/html/index.js"
 </script>
 ```
 
@@ -136,3 +136,58 @@ Returns the hyperbolic tangent value of whatever "x" value you input
 ```np.softmax(inputs)```
 
 Applies the softmax function to the inputs array and returns the new result as an array.
+
+### Relu
+
+```np.relu(x)```
+
+Applies the relu function to the value "x" and returns result.
+
+### Leaky Relu
+
+```np.leakyrelu(x)```
+
+Applies the leaky relu function to the value "x" and returns the result.
+
+
+## Debug
+
+### Info
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.info()
+```
+
+Automatically logs the dimensions of the array that you invoke the function on.
+
+
+### Table
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.table()
+```
+
+Automatically prints the array to the console in a neat format
+
+### HasNaN
+
+```
+let arr = [[0,0,0],[0,0,0]]
+arr.hasNaN()
+```
+
+Checks if any of the values of the array are "NaN". If there are values with "NaN", it prints "true" to the console.
+
+
+
+
+# Versions
+
+Latest Versions: 1.1.3
+
+Stable Versions:
+
+- 1.1.3: Fixed debug glitches. Added relu functions
+- 1.1.1: Working browser support via static import
