@@ -141,7 +141,13 @@ Applies the softmax function to the inputs array and returns the new result as a
 
 ```np.relu(x)```
 
-Applies the relu function to the value "x" and returns result.
+Applies the relu function to the value "x" and returns the result.
+
+### Heaviside
+
+```np.heaviside(x)```
+
+Applies the derivative of the relu function to the value "x" and returns the result.
 
 ### Leaky Relu
 
@@ -149,6 +155,11 @@ Applies the relu function to the value "x" and returns result.
 
 Applies the leaky relu function to the value "x" and returns the result.
 
+### Derivative of Leaky Relu
+
+```np.dleakyrelu(x)```
+
+Applies the derivative of the leaky relu function to the value "x" and returns the result.
 
 ## Debug
 
