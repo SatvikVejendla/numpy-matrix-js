@@ -185,9 +185,9 @@ Checks if any of the values of the array are "NaN". If there are values with "Na
 
 # Versions
 
-Latest Versions: 1.1.3
+Latest Versions: 1.1.4
 
 Stable Versions:
-
+- 1.1.4: Added relu functions and "arange" and "oneslike" functions.
 - 1.1.3: Fixed debug glitches. Added relu functions
 - 1.1.1: Working browser support via static import
