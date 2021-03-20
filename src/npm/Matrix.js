@@ -9,6 +9,8 @@ const {
 
 module.exports = {
   zeros: init.zeros,
+  ones_like: init.ones_like,
+  arange: init.arange,
   random: random,
   matmul: m_math.multiply,
   transpose: s_math.transpose,
@@ -18,7 +20,9 @@ module.exports = {
   tanh: functions.tanh,
   dtanh: functions.dtanh,
   relu: functions.relu,
+  heaviside: functions.heaviside,
   leakyrelu: functions.leakyrelu,
+  dleakyrelu: functions.dleakyrelu,
   subtract: m_math.subtract,
   add: m_math.add,
 };
