@@ -61,6 +61,44 @@ Parameters   |   What it is   | Required
 rows         |  number of rows in your array | yes
 cols         |  number of columns in your array | yes
 
+
+```np.ones_like(matrix)```
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+matrix       |  the matrix which structure you want to mimick | yes
+
+
+```np.arange(end)```
+
+Creates a new matrix with values from "0" to "end".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+end       |  the end value for the range | yes
+
+
+```np.arange(start, end)```
+
+Creates a new matrix with values from "start" to "end".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+start       |  the start value for the range | yes
+end          | the end value for the range  | yes
+
+
+```np.arange(start, end, step)```
+
+Creates a new matrix with values from "start" to "end" with a step of "step".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+start       |  the start value for the range | yes
+end          | the end value for the range  | yes
+step         | the step between values in the array | yes
+
+
 ## Math
 
 ```np.matmul(a, b)```
