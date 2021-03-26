@@ -80,6 +80,16 @@ Object.defineProperty(Array.prototype, "multiply", {
   },
 });
 
+function getShape(mat) {
+  return [mat.length, mat[0].length];
+}
+
+Object.defineProperty(Array.prototype, "shape", {
+  get() {
+    return getShape(this);
+  },
+});
+
 Object.defineProperty(Array.prototype, "info", {
   value: function () {
     info(this);

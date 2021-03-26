@@ -81,6 +81,17 @@ Object.defineProperty(Array.prototype, "T", {
     return transpose(this);
   },
 });
+
+function getShape(mat) {
+  return [mat.length, mat[0].length];
+}
+
+Object.defineProperty(Array.prototype, "shape", {
+  get() {
+    return getShape(this);
+  },
+});
+
 const debug = require("../../lib/main/debug/export.js");
 
 Object.defineProperty(Array.prototype, "info", {
