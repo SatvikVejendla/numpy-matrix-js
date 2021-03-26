@@ -61,6 +61,44 @@ Parameters   |   What it is   | Required
 rows         |  number of rows in your array | yes
 cols         |  number of columns in your array | yes
 
+
+```np.ones_like(matrix)```
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+matrix       |  the matrix which structure you want to mimick | yes
+
+
+```np.arange(end)```
+
+Creates a new matrix with values from "0" to "end".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+end       |  the end value for the range | yes
+
+
+```np.arange(start, end)```
+
+Creates a new matrix with values from "start" to "end".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+start       |  the start value for the range | yes
+end          | the end value for the range  | yes
+
+
+```np.arange(start, end, step)```
+
+Creates a new matrix with values from "start" to "end" with a step of "step".
+
+Parameters   |  What it is    | Required
+-------------|----------------|----------
+start       |  the start value for the range | yes
+end          | the end value for the range  | yes
+step         | the step between values in the array | yes
+
+
 ## Math
 
 ```np.matmul(a, b)```
@@ -141,13 +179,26 @@ Applies the softmax function to the inputs array and returns the new result as a
 
 ```np.relu(x)```
 
-Applies the relu function to the value "x" and returns result.
+Applies the relu function to the value "x" and returns the result.
+
+### Heaviside
+
+```np.heaviside(x)```
+
+Applies the derivative of the relu function to the value "x" and returns the result.
 
 ### Leaky Relu
 
 ```np.leakyrelu(x)```
 
 Applies the leaky relu function to the value "x" and returns the result.
+
+### Derivative of Leaky Relu
+
+```np.dleakyrelu(x)```
+
+Applies the derivative of the leaky relu function to the value "x" and returns the result.
+
 
 
 ## Debug
@@ -185,9 +236,9 @@ Checks if any of the values of the array are "NaN". If there are values with "Na
 
 # Versions
 
-Latest Versions: 1.1.3
+Latest Versions: 1.1.4
 
 Stable Versions:
-
+- 1.1.4: Added relu functions and "arange" and "oneslike" functions.
 - 1.1.3: Fixed debug glitches. Added relu functions
 - 1.1.1: Working browser support via static import
